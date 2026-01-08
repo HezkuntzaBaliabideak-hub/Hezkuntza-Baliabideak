@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunikazioa eta koordinazioa</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== APARTADOS ===== */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h3 {
+            color: #0A3A5A;
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #2ec4b6;
+            padding-left: 1rem;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-box p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .section-box h4 {
+            color: #0A3A5A;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-box ul {
+            padding-left: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .section-box ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/Orientabidea(irakasle).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Komunikazioa eta koordinazioa</h1>
+        <p>Ikasleen ongizatea bermatzeko oinarrizko tresnak</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content">
+    <div class="container">
+
+        <!-- INTRO -->
+        <div class="intro">
+            <h2>Komunikazioaren garrantzia hezkuntza-esparruan</h2>
+            <p>
+            Dibortzio-prozesuak bizi dituzten haurrek aldaketa emozionalak, sozialak eta portaerazkoak izan ditzakete, eta horiek eskolako egunerokoan islatzen dira. Testuinguru horretan, komunikazioa eta koordinazioa funtsezko tresnak dira haurraren ongizatea bermatzeko. Atal honek irakasleen eta familien arteko lankidetza, baita irakaslearen eta haurraren arteko harremana ere, indartzea du helburu, laguntza koherentea, errespetuzkoa eta egokitua eskaintzeko. Ondoko azpiataletan, familiarekin eta haurrarekin komunikatzeko orientabide praktikoak aurkezten dira, betiere haurraren segurtasun emozionala eta egokitze-prozesua errazteko asmoz.
+            </p>
+        </div>
+
+        <!-- FAMILIAREKIN -->
+        <div class="section">
+            <h3>Familiarekin</h3>
+            <div class="section-box">
+                <p>
+                    Familiarekin komunikazioa eta koordinazioa funtsezko estrategia da haurraren aldaketa emozional eta sozialetara egokitzeko. Irakasleak bitartekari gisa jokatu behar du, gurasoen rola errespetatuz eta etxeko espazioan inbaditu gabe, eta aldi berean haurra behar bezala laguntzeko garrantzia emanez. Helburua da komunikazio errespetuzkoa eta lagungarria mantentzea, haurra seguru eta ongi egongo dela sentiaraziz, eta familiarekin lankidetza egokia bultzatuz.
+                </p>
+
+                <h4>Irakasleak kontuan hartu beharrekoa</h4>
+                <ul>
+                    <li>Familia batzuek egoeraz ikastetxea informatzeari saihestu dezakete edo distantzia hartu.</li>
+                    <li>Beste batzuek krisiaren kudeaketa irakaslearen gain uzteko joera izan dezakete, gehiegizko zama sortuz.</li>
+                    <li>Irakasleak bitartekari lana egin behar du, gurasoen rola errespetatuz eta etxeko esparrua inbaditu gabe.</li>
+                    <li>Helburua da haurraren egokitze emozionala erraztea, familiarekin komunikazio errespetuzkoa eta lagungarria mantenduz.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HAURRAREKIN -->
+        <div class="section">
+            <h3>Haurrarekin</h3>
+            <div class="section-box">
+                <p>
+                    Haurrarekin komunikazioa funtsezkoa da haurraren ongizatea eta egokitze emozionala sustatzeko. Irakaslearen rola laguntza eta sostengu emozionaleko figura izatea da, espazio segurua sortuz non haurra entzuten eta ulertua sentitzen den. Irakasleak eskura izan behar du aukera emateko ikasleak bere erreakzioak adierazi ditzan eta beharrezko laguntza eskaintzeko une egokian.
+                </p>
+
+                <h4>Nola komunikatu</h4>
+                <ul>
+                    <li>Irakasleak espazio segurua sortu behar du, haurra entzuten eta ulertua sentitzeko.</li>
+                    <li>Eskuragarri egon behar du ikasleak bere erreakzioak adierazi ditzan.</li>
+                    <li>Laguntza emozionala eskaintzea, une batean gurasoek ezin dezaketenean guztiz egitea.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+</footer>
+
+</body>
+</html>

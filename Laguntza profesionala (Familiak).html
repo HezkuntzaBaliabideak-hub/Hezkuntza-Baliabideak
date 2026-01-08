@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <title>Laguntza profesionala</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== BARRA AZUL ARRIBA ===== */
+    .top-header {
+      background-color: #0A3A5A;
+      padding: 1rem 0;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      color: #A8D0E6;
+      text-decoration: underline;
+    }
+
+    /* ===== HERO VIDEO ===== */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 30vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hero-video video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-video::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 1rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0A3A5A;
+    }
+
+    /* ===== TARJETAS ===== */
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0A3A5A;
+    }
+
+    .emoji {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BARRA AZUL CON LOGO Y MENÚ -->
+  <div class="top-header">
+    <div class="header-content">
+      <div class="logo">Hezkuntza Baliabideak</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Hasiera</a></li>
+          <li><a href="irakasleak.html">Irakasleak</a></li>
+          <li><a href="familiak.html">Familiak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO VIDEO -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="img/Orientabidea(Familiak).mp4" type="video/mp4">
+      Zure nabigatzaileak ez du bideoa onartzen.
+    </video>
+    <div class="hero-content">
+      <h1>Laguntza profesionala</h1>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <main class="container">
+
+    <section class="intro">
+      <h2>Laguntza espezializatua haurren ongizaterako</h2>
+      <p>
+        Dibortzio-prozesuan, gurasoek hainbat programa eta baliabide profesional erabil ditzakete, seme-alaben ongizatea bermatzeko eta komunikazioa hobetzeko. Programak haurrei eta familiei laguntza koordinatua eskaintzen die, emozioen kudeaketa eta harreman positiboa sustatuz.
+      </p>
+    </section>
+
+    <section class="section">
+             <div class="card">
+          <h3><span class="emoji">🤝</span>Kanpoko esku-hartze programak</h3>
+          <ul>
+            <li><strong>“Egokitzen” programa (Deusto FamilyPsych):</strong> Dibortzio gatazkatsuetarako diseinatua. Familia osoarekin lan egiten du, parentalitate positiboa eta haurren ongizatea sustatzeko.</li>
+            <li><strong>“Bikotearen Haustura, Familiaren Haustura” programa:</strong> Guraso eta haurrekin esku hartzen du, desoreka emozionala murrizteko eta komunikazio familiarra hobetzeko.</li>
+            <li><strong>CODIP programak (Children of Divorce Intervention Program):</strong> Prebentzio eta esku-hartze programak dira; haurrentzako talde-laguntza eskaintzen dute, sentimenduak adierazteko eta arazoak konpontzeko trebetasunak lantzeko.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

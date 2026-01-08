@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Ver Respuestas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 12px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #4ECDC4; 
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-cargar {
+            background: #3498db;
+            color: white;
+        }
+        .btn-borrar {
+            background: #e74c3c;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Panel Admin - Respuestas del Formulario</h1>
+        </div>
+        
+        <!-- Botón Volver -->
+        <div style="margin-bottom: 20px;">
+            <a href="index.html" 
+               style="background: #3498db; color: white; padding: 10px 15px; 
+                      text-decoration: none; border-radius: 5px; font-weight: bold;">
+               ← Volver al Inicio
+            </a>
+        </div>
+        
+        <button class="btn btn-cargar" onclick="cargarRespuestas()">
+            🔄 Cargar Respuestas
+        </button>
+        <button class="btn btn-borrar" onclick="borrarTodasLasRespuestas()">
+            🗑️ Borrar Todas las Respuestas
+        </button>
+        
+        <div id="respuestas"></div>
+    </div>
+
+    <script>
+        function cargarRespuestas() {
+            // Leer datos de LOCALSTORAGE (donde index.html los guarda)
+            let respuestas = JSON.parse(localStorage.getItem('formularioRespuestas') || '[]');
+            
+            console.log('Datos encontrados:', respuestas);
+            
+            let html = '<h3>📈 Total de respuestas: ' + respuestas.length + '</h3>';
+            
+            if (respuestas.length === 0) {
+                html += '<p style="color: #666; font-style: italic;">No hay respuestas guardadas todavía.</p>';
+            } else {
+                html += '<table>';
+                html += '<tr><th>Nombre</th><th>Email</th><th>Tipo</th><th>Mensaje</th><th>Fecha</th><th>Acciones</th></tr>';
+                
+                respuestas.forEach((item, index) => {
+                    html += `<tr>
+                        <td>${item.nombre || 'N/A'}</td>
+                        <td>${item.email || 'N/A'}</td>
+                        <td>${item.tipo || 'N/A'}</td>
+                        <td>${item.mensaje || 'N/A'}</td>
+                        <td>${item.fecha || 'N/A'}</td>
+                        <td>
+                            <button onclick="borrarUnaRespuesta(${index})" style="background:#e74c3c;color:white;border:none;padding:5px 10px;border-radius:3px;cursor:pointer;">
+                                ❌ Borrar
+                            </button>
+                        </td>
+                    </tr>`;
+                });
+                
+                html += '</table>';
+            }
+            
+            document.getElementById('respuestas').innerHTML = html;
+        }
+
+        function borrarTodasLasRespuestas() {
+            if(confirm('⚠️ ¿Estás seguro de borrar TODAS las respuestas?\nEsta acción no se puede deshacer.')) {
+                localStorage.removeItem('formularioRespuestas');
+                alert('✅ Todas las respuestas han sido borradas');
+                cargarRespuestas();
+            }
+        }
+
+        function borrarUnaRespuesta(index) {
+            if(confirm('¿Borrar esta respuesta?')) {
+                let respuestas = JSON.parse(localStorage.getItem('formularioRespuestas') || '[]');
+                respuestas.splice(index, 1);
+                localStorage.setItem('formularioRespuestas', JSON.stringify(respuestas));
+                alert('✅ Respuesta borrada');
+                cargarRespuestas();
+            }
+        }
+
+        // Cargar automáticamente al abrir la página
+        cargarRespuestas();
+    </script>
+</body>
+</html>º

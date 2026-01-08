@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelako jarduerak eta ariketa praktikoak</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== CAJAS ===== */
+        .grid-boxes {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem auto 0;
+            max-width: 1250px;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* ===== CAJAS DE LIBROS ===== */
+        .book-box {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .book-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .book-info h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            color: #0A3A5A;
+            font-size: 1.2rem;
+        }
+
+        .book-cycle {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.6rem;
+        }
+
+        .book-info p {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .book-cover {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .book-cover img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .book-box {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .pdf-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 14px;
+            background-color: #0A3A5A;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-button:hover {
+            background-color: #2ec4b6;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/Gelarako jarduerak eta ariketa praktikoak(Irakasleak).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Gelarako jarduerak eta ariketa praktikoak</h1>
+        <p>Irakasleentzako baliabide pedagogikoak</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Gelarako jarduerak eta ariketa praktikoak</h2>
+            <p>
+                Atal honetan, irakasleek dibortzio-egoeran dauden ikasleen jarraipen emozionala eta hezitzailea egiteko erabil ditzaketen ebaluazio eta jarraipen tresnak biltzen dira. Baliabide hauek irakaslearen behaketa sistematikoa, familien eta hezkuntza-orientatzailearen arteko koordinazioa eta ikaslearen bilakaeraren erregistro jarraitua errazteko pentsatuta daude. Tresna hauek orientagarriak dira, eta ikasleen adinaren, bizi duten egoeraren eta gelako testuinguruaren arabera egokitu daitezke, betiere esku-hartze arduratsu, errespetuzko eta profesional baten barruan.
+            </p>
+        </div>
+
+        <!-- CAJAS -->
+        <div class="grid-boxes">
+
+            <!-- LIBRO 1 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Aste honetako nire emozioak" fitxa</h3>
+                    <p>Aste osoan zehar ikasleak sentitu dituen emozio nagusiak identifikatzeko eta markatzeko fitxa sinplea da. Eguraldi-sisteman oinarrituta (eguzkitsua, lainotsua, euritsua…), haurrek modu seguruan adierazten dute nola bizi izan dituzten egunetako egoerak, xehetasun pertsonalik kontatu beharrik gabe. Irakasleari laguntzen dio aldaketa emozionalak antzematen.</p>
+                </div>
+                <a href="PDF/Asteko behaketa fitxa.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+            <!-- LIBRO 3 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Nor da nire laguntza-sarea? mapa</h3>
+                    <p>Ikasleak bere inguruan dituen pertsona lagungarriak identifikatzeko baliabidea: irakasleak, lagunak, aitona-amonak, anai-arrebak… Haurrak marrazkien edo sinboloen bidez adierazten ditu bere “sareko” pertsonak. Irakasleak ikus dezake nork ematen dion segurtasuna eta zer harreman indartu behar den.</p>
+                </div>
+                <a href="PDF/Nor da nire laguntza-sarea.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+            <!-- LIBRO 4 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Bi etxe, errutina bakarra" antolaketa-fitxa</h3>
+                    <p>Bi etxe artean bizi diren haurrentzat. Fitxak asteko eguneroko errutinak antolatzeko laguntza ematen du: lanak, materiala, jarduerak, gorputz-hezkuntzako motxila, etab. Helburua da antolaketa hobetzea eta estresa murriztea, prozesua errazagoa eta aurresangarriagoa izan dadin.</p>
+                </div>
+                <a href="PDF/Bi etxe, errutina bakarra.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+             <!-- LIBRO 1 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Nola jakin haserre nagoela?" seinale fisikoen gida</h3>
+                    <p>Haurrak haserrea edo urduritasuna sentitzen ari direnean gorputzak ematen dizkien seinaleak identifikatzen laguntzen duen materiala: bihotza azkarrago, sabeleko mina, eskuak tinko… Gida honek autoerregulazio emozionala lantzen du, baita egoera zailetan aurrez esku hartzeko aukera ere.</p>
+                </div>
+                <a href="PDF/Nola jakin haserre nagoela.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+            <!-- LIBRO 3 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Lasaitzeko estrategiak" poster bisuala</h3>
+                    <p>Arnasketa ariketak, 10 arteko zenbaketa, “atseden txokoa” erabiltzea, marraztea… bezalako teknikak jasotzen dituen kartel praktikoa. Ikasgelan jar daiteke eta haurrek egunero kontsultatzeko balio du. Egokia da tentsio momentuetan berehala erabili ahal izateko.</p>
+                </div>
+                <a href="PDF/Lasaitzeko estrategiak.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+            <!-- LIBRO 4 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Egun honeko 3 gauza onak" koaderno txikia</h3>
+                    <p>Eskola-hasieran edo amaieran haurrek eguneko hiru gauza on idazten dituzten koaderno pertsonala. Praktika honek pentsamendu positiboa eta egonkortasun emozionala indartzen ditu, bereziki etxean egoera gatazkatsuak daudenean.</p>
+                </div>
+                <a href="PDF/Egun honetako 3 gauza onak.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+             <!-- LIBRO 1 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Nire indarguneak" autoestimua lantzeko fitxa</h3>
+                    <p>Ikasleak bere trebetasun, ahalmen eta gauza onak identifikatzen dituen jarduera sinplea. Lagunek ere idatz dezakete, eta horrek autoestimua indartzen laguntzen du.</p>
+                </div>
+                <a href="PDF/Nire indarguneak.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+
+            <!-- LIBRO 3 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>"Nire astea" jarraipen-agenda</h3>
+                    <p>Astean zehar ikasleak nola sentitu den, zer zailtasun izan dituen eta zein arrakasta txiki lortu dituen laburbiltzeko tresna. Irakaslearentzako informazio baliotsua da jarraipen emozional erregularra egiteko.</p>
+                </div>
+                <a href="PDF/Nire astea.pdf" class="pdf-button" download> 📄 PDF </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hezkuntza Baliabideak</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baliabideak</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== CAJAS ===== */
+        .grid-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem auto 0;
+            max-width: 900px;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s;
+            border-left: 4px solid #2ec4b6;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .box h3 {
+            color: #0A3A5A;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .grid-boxes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+ <body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Hezkuntza Baliabideak</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hasiera</a></li>
+                    <li><a href="irakasleak.html">Irakasleak</a></li>
+                    <li><a href="Familiak.html">Familiak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-video">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="img/Baliabideak(irakasleak).mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Baliabideak</h1>
+            <p>Irakasleentzako baliabide pedagogikoak</p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="content">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Baliabide Orokorrak</h2>
+                <p>
+                    Ikasleek dibortzio-egoeran bizi ditzaketen emozio eta egoera zailak kudeatzeko, irakasleek eskura izatea baliabide egokiak funtsezkoa da. Atal honetan, material praktikoak, ipuin eta ikus-entzunezkoak, gelarako jarduerak, dinamikak, eta komunikazioa errazteko tresnak bildu dira. Helburua da irakasleei laguntza eskuragarria eskaintzea, ikasleen ongizate emozionala eta ikaskuntza prozesua babesten lagunduko duten tresnekin.
+                </p>
+            <div class="section-title">
+                <p>Baliabide hauek iraunkorrak, erraz aplikatzeko modukoak eta eguneroko praktikarekin bateragarriak dira; gainera, atal bakoitzean adin-tarteari eta egoera emozionalari egokitutako proposamenak aurkituko dituzu. Gogoratu: material hauek irakaslearen lana osatzeko dira, ez ordezkatzeko; eta egoera bakoitzaren arabera moldatu beharko dira.</p>
+              </div>
+
+            <!-- CAJAS -->
+            <div class="grid-boxes">
+
+                <a href="Ipuinak eta album ilustratuak (Irakasleak).html" class="box">
+                    <span class="emoji">📚</span>
+                    <h3>Ipuinak eta album ilustratuak</h3>
+                    <p>Baliabide hauek haurren emozioak lantzeko aukera ematen dute, istorioen bidez. Dibortzioa, familia-aniztasuna edo aldaketa emozionalak modu natural eta ulergarrian lantzen laguntzen dute.</p>
+                </a>
+
+                <a href="Bideoak eta ikus-entzunezkoak (Irakasleak).html" class="box">
+                    <span class="emoji">🎬</span>
+                    <h3>Bideoak eta ikus-entzunezkoak</h3>
+                    <p>Ikus-entzunezkoek egoera konplexuak modu bisualean azaltzen dituzte, haurren arreta eta ulermena erraztuz. Enpatia, emozioen identifikazioa eta hausnarketa sustatzeko tresna egokiak dira.</p>
+                </a>
+
+                <a href="Gelarako jarduerak eta ariketa praktikoak (Irakasleak).html" class="box">
+                    <span class="emoji">✏️</span>
+                    <h3>Gelarako jarduerak eta ariketa praktikoak</h3>
+                    <p>Jarduera hauek gelan zuzenean aplikatzeko pentsatuta daude, ikasleen parte-hartzea eta adierazpen emozionala bultzatuz. Esperientzia praktikoen bidez ikaskuntza esanguratsua sustatzen dute.</p>
+                </a>
+
+                <a href="Abestiak eta musika baliabideak (Irakasleak).html" class="box">
+                    <span class="emoji">🎵</span>
+                    <h3>Abestiak eta musika baliabideak</h3>
+                    <p>Musikak emozioak adierazteko eta kudeatzeko bide eraginkorra eskaintzen du. Abestien bidez, ikasleek sentimenduak identifikatu, lasaitu eta partekatzeko aukera dute.</p>
+                </a>
+
+                <a href="Jolasak (Irakasleak).html" class="box">
+                    <span class="emoji">🎲</span>
+                    <h3>Jolasak</h3>
+                    <p>Jolasen bidez, ikasleek modu naturalean lantzen dituzte emozioak, harremanak eta gatazken kudeaketa. Ikaskuntza ludikoa eta soziala sustatzen duten baliabideak dira.</p>
+                </a>
+
+                <a href="Ebaluazioa eta jarraipen tresnak (Irakasleak).html" class="box">
+                    <span class="emoji">📊</span>
+                    <h3>Ebaluazio eta jarraipen tresnak</h3>
+                    <p>Tresna hauek ikasleen ongizate emozionalaren jarraipena egiteko balio dute. Irakasleari laguntzen diote beharrak antzematen eta esku-hartze egokiak planifikatzen.</p>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+    </footer>
+
+</body>
+</html>

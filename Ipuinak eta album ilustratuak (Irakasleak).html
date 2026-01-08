@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baliabideak</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== CAJAS ===== */
+        .grid-boxes {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem auto 0;
+            max-width: 1250px;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* ===== CAJAS DE LIBROS ===== */
+        .book-box {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .book-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .book-info h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            color: #0A3A5A;
+            font-size: 1.2rem;
+        }
+
+        .book-cycle {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.6rem;
+        }
+
+        .book-info p {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .book-cover {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .book-cover img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .book-box {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/Ipuinak eta album ilustratuak (Irakasleak).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Ipuinak eta album ilustratuak</h1>
+        <p>Irakasleentzako baliabide pedagogikoak</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Ipuinak eta album ilustratuak</h2>
+            <p>
+                Atal honetan, dibortzioaren gaia haurrei lantzeko egokiak diren ipuinak eta album ilustratuak biltzen dira.
+                Baliabide hauek orientagarriak dira, eta ikasleen adinaren, heldutasun emozionalaren eta gelako testuinguruaren
+                arabera egokitu daitezke.
+            </p>
+        </div>
+
+        <!-- CAJAS -->
+        <div class="grid-boxes">
+
+            <!-- LIBRO 1 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Kamile, aita eta ama ez daude haserre →  Aline de Pétigny</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Jolas-orduan Unai triste samar dago. Gurasoak banandu egin dira eta kezkatuta dago, beharbada, bere erruz bananduko zirela pentsatzen duelako. Kamilek antzeko pentsamendua izan du baina, azkenean, lasaitu dira: "Lasai, Unai, aitatxoren eta amatxoren maite kuttunak gara!".</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Kamile, ama eta aita ez daude haserre.png" alt="Libro 1">
+                </div>
+            </div>
+
+            <!-- LIBRO 2 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Valentina tiene dos casas → Paula Carbonell</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Valentinak bi etxe eta gauza asko ditu bakoitzean, baina egun batzuetan ez dago nahi duenik nahi duen unean. Valentinari gertatzen zaiona askoz haur gehiagori gertatzen zaio, eta askoz gehiagotan gerta daiteke.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Valentina tiene dos casas →Paula Carbonell.jpg" alt="Libro 2">
+                </div>
+            </div>
+
+            <!-- LIBRO 3 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Espejo en la casa de mamá. El espejo en la casa de papá → Luis Amavisca</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Liburu honek bi istorio ditu. Liburua aitaren etxetik edo amaren etxetik ireki dezakezu. Protagonistaren gelan, bere bi etxeetan, ispilu magiko bat dago. Eta liburuaren erdian istorioek bat egingo dute.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/El espejo en casa de mama. El espejo en casa de papa.png" alt="Libro 3">
+                </div>
+            </div>
+
+            <!-- LIBRO 4 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Was It the Chocolate Pudding?: A Story for Little Kids about Divorce → Sandra Levins</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Gazte baten gurasoak dibortziatzen direnean, uste du txokolatezko budinagatik dela. Koilara bat ekarri izan balu! Dibortzioak gauza asko aldatzen ditu ume gazte baten bizitzan, familia egitura, bizimodua eta haurraren etxea barne. Ondorioz, guraso dibortziatuen seme-alabak triste, bakarrik, haserre edo nahastuta senti daitezke. Eta, istorio honetako mutil gazteak bezala, askotan sentitzen dute errua beraiena dela. Txokolatezko budina al zen? Eskolatzeko adin goiztiarra eta gazteagoa duten haurrek bizi duten nahasmenduari heltzen dio, eta lasaitasun kontsolagarrian zentratzen da buruan dituzten galderetan: Gurasoek maite al naute oraindik? Nork zainduko nau? Eta, agian, galderarik handiena: nire errua izan da?</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Was It the Chocolate Pudding A Story for Little Kids about Divorce → Sandra Levins.jpg" alt="Libro 4">
+                </div>
+            </div>
+
+            <!-- LIBRO 5 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Seis años, seis casitas → Josep Gregori eta Franc Parreño</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Gure protagonistak urtebetetze opari berezi bat jasotzen du urtero: ebaki daitekeen etxetxo bat. Baina gurasoak banandu egin dira eta etxetxoak banatu behar izan ditu. Orain, zure urtebetetzea gerturatzen ari dela... gogoratuko al dira zure gurasoak etxe txiki berri bat oparitzeaz? Protagonistak azaldu duenez, hasieran dena istilu bat zen, baina, pixkanaka, gauzak dibertigarriago bihurtzen ari dira. Adibidez, arropa lo egin behar duen etxean ez duenean. Horrela, egoera ohi baino normalago jorratzen duen ipuina da, umore puntu batetik.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Seis años, seis casitas → Josep Gregori eta Franc Parreño.jpg" alt="Libro 1">
+                </div>
+            </div>
+
+            <!-- LIBRO 6 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>¿Cuando se iran estos? → Ute Krause</h3>
+                    <div class="book-cycle">1. zikloa</div>
+                    <p>Familia handi bat maleta askorekin. Familia "normal" bat familia berrosatu bihurtzen da. Seme-alabak sarri aldatzen dira etxetik, aitarengandik amarenera, eta itzuli egiten dira. Ez dira batere ondo konpontzen familia berriko kideekin. Azkenean, desegitea lortzen dute. Baina aita triste dago eta seme-alabak oker daudela uste dute. Familia berreginei buruzko liburu original, alai eta dibertigarria.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Cuando se iran estos.png" alt="Libro 2">
+                </div>
+            </div>
+
+            <!-- LIBRO 7 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Mis dos nidos → Marta Aguilera eta Marga Marín</h3>
+                    <div class="book-cycle">1.eta 2. zikloa</div>
+                    <p>Maupak, gurasoek maite duten txoritxoa, gurasoen banaketari aurre egin behar dio. Istorio hau onarpenaren eta lasaitasunaren adibide ona da, dibortzioa ulertzeko eta normalizatzeko oso gomendagarria; izan ere, nahiz eta oso ohikoa izan, batzuetan ez dago erabat integratuta. Nire bi habiek tolerantziari eta enpatiari egiten dioten kantua da, eta, batez ere, gurasoek semeari dioten maitasunari egiten dioten oda. Gurasoek bikote gisa dituzten desadostasunak alde batera uzten dituzte, guraso gisa asmatzean zentratzeko, semearen, bere buruaren eta inguruko pertsona maitatu guztien onerako.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Mis dos nidos.png" alt="Libro 3">
+                </div>
+            </div>
+
+            <!-- LIBRO 8 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Mis padres ya no viven juntos: ahora son amigos → Carles Soro</h3>
+                    <div class="book-cycle">1. eta 2. zikloa</div>
+                    <p>Liburu hau tresna bikaina da, gurasoei euren seme-alabei, ahalik eta modu naturalenean, euren banantzea azaltzeko orduan lagungarri izango zaiena.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Mis padres ya no viven juntos ahora son amigos→ Carles Soro.jpg" alt="Libro 4">
+                </div>
+            </div>
+
+            <!-- LIBRO 9 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Mamá y papá se separan. Cómo Afrontar la separación Familia → Raquel Diez Real eta Tamara Durán Salguero</h3>
+                    <div class="book-cycle">1. eta 2. zikloa</div>
+                    <p>Gurasoak banantzea traumatikoa izan daiteke seme-alabentzat. Liburu honek, ondo ilustratutako testu terapeutikoen bidez, beren esperientziak eta erreakzio emozionalak aurkitzen, deskribatzen eta kontrolatzen laguntzen die: urduritasuna, ziurgabetasuna, kezka, beldurra, arbuioa, haserrea, maitasun faltaren sentsazioa…</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Mamá y papá se separan. Cómo Afrontar la separación Familia→ Raquel Diez Real eta Tamara Durán Salguero.jpg" alt="Libro 1">
+                </div>
+            </div>
+
+            <!-- LIBRO 10 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Los fines de semana veo a papá → Martina Baumbach</h3>
+                    <div class="book-cycle">1.eta 2. zikloa</div>
+                    <p>Leoren gurasoek gero eta gehiago eztabaidatzen dute eta Amaren eta Aitaren arteko tentsioa hazi baino ez da egiten. Harik eta egun batean Leoren gurasoek dibortziatzea erabakitzen duten arte. Leori kosta egiten zaio ulertzea, eta beldur da "banandu" egingo ote diren.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Los fines de semana veo a papá → Martina Baumbach.jpg" alt="Libro 2">
+                </div>
+            </div>
+
+            <!-- LIBRO 11 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Cuando mis padres dejaron de ser amigos → Jennifer Moore-Mallinos</h3>
+                    <div class="book-cycle">1. eta 2. zikloa</div>
+                    <p>Nire gurasoak lehen lagunak ziren eta dena elkarrekin egiten genuen, baina gero gauzak aldatzen hasi ziren. Gurasoak beti zeuden triste, eta elkarri hitz egiten ziotenean eztabaidatzeko baino ez zen. Nik uste nuen nire errua zela nire gurasoek lagun izateari utzi izana, baina orain badakit batzuetan gurasoak hobeto moldatzen direla etxe ezberdinetan bizi direnean.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Cuando mis padres dejaron de ser amigos→ Jennifer Moore-Mallinos.jpg" alt="Libro 3">
+                </div>
+            </div>
+
+            <!-- LIBRO 12 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Etxe bitan bizi naiz, eta zer? → Miren Agur Meabe Plaza</h3>
+                    <div class="book-cycle">2. eta 3. zikloa</div>
+                    <p>Sara, liburu honetako pertsonaia, etxe bitan bizi da orain. Gehienetan amarekin eta batzuetan aitarekin. Bietan dauka, ordea, bere tokia, bietan bere txokoa, eta asko maite dute bietan. Lehen, etxe bakar batean bizi zen, aita eta ama ere etxe bakar batean bizi zirelako. Baina gurasoak banandu zirenetik aita etxe batean bizi da eta ama bestean; Sara, berriz, bietan. Gurasoak apartatu zirenean, Sara kili-kolo ibili zen, erabat galduta, bere ordu arteko mundua guztiz aldatu zelako. Baina orain egoera berrira ongi moldatu da, gurasoak banandu arren, ondo moldatzen direlako euren artean, eta Sarak badakielako bien etxean duela bere tokia, eta bien etxean duela maitasuna.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Etxe bitan bizi naiz eta zer.png" alt="Libro 4">
+                </div>
+            </div>
+
+            <!-- LIBRO 13 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>A Smart Girl's Guide to Her Parents' Divorce: How to Land on Your Feet When Your World Turns Upside Down → Nancy Holyoke</h3>
+                    <div class="book-cycle">3. zikloa</div>
+                    <p>Dibortzioak dakartzan aldaketak zailak izan daitezke. Aholku liburu honek zure gurasoen dibortzioa hobeto ulertzen lagunduko dizu. Liburuak galderak eta aholkuak barne hartzen ditu, baita han egon diren benetako nesken aholkuak ere.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/A Smart Girl's Guide to Her Parents' Divorce_How to Land on Your Feet When Your World Turns Upside Down  Nancy Holyoke.jpg" alt="Libro 1">
+                </div>
+            </div>
+
+            <!-- LIBRO 14 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Gurasoak tokatzen zaizkit → Yolanda Larreategui</h3>
+                    <div class="book-cycle">3. zikloa</div>
+                    <p>Mikelen eta bion gurasoak bananduta daude, eta Mirenenak ere bai. Patxi Puzkerrenak, ez, ordea; baina guztiok egin behar izaten diegu aurre hartu ez ditugun erabakien ondorioei. Gurasoak ez dira horretaz enteratzen. Mundua, gure ikuspegitik, ez baita haiek pentsatzen duten bezalakoa. Gure betaurrekoak jantzi nahi?</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Gurasoak tokatzen zaizkit → Yolanda Larreategui.jpg" alt="Libro 2">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hezkuntza Baliabideak</p>
+</footer>
+
+</body>
+</html>

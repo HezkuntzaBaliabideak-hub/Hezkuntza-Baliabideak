@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <title>Hezkuntza-jarraipenaren antolaketa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== HEADER AZUL ===== */
+    .top-header {
+      background-color: #0A3A5A; /* parte azul */
+      padding: 1rem 0;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #A8D0E6;
+    }
+
+    /* ===== HERO VIDEO ===== */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      height: 30vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hero-video video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-video::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 1rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      color: #ffffff; /* texto blanco sobre el video */
+      margin: 0;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0A3A5A;
+    }
+
+    /* ===== TARJETAS ===== */
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0A3A5A;
+    }
+
+    .emoji {
+      font-size: 1.6rem;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #1e6f5c;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PARTE AZUL DEL HEADER -->
+<div class="top-header">
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- HERO VIDEO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="img/Orientabidea(irakasle).mp4" type="video/mp4">
+      Zure nabigatzaileak ez du bideoa onartzen.
+    </video>
+    <div class="hero-content">
+      <h1>Hezkuntza-jarraipenaren antolaketa</h1>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<main class="container">
+
+  <section class="intro">
+    <h2>Ikasleen jarraipen egituratua eta koordinatua</h2>
+    <p>
+      Ikasleen jarraipena modu egokian antolatzea funtsezkoa da haien garapen integrala eta ongizatea bermatzeko. Atal honetan, irakasleentzako aholkuak eta kontuan izan beharrekoak aurkituko dituzu. Baliabide osagarriak, hala nola fitxak eta txantiloiak, Baliabideak atalean aurkituko dituzue. Helburua da ikaslearen beharrak modu eraginkorrean identifikatzea eta behar den laguntza modu koordinatuan eskaintzea.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+
+      <div class="card">
+        <h3><span class="emoji">👀</span>Behatze sistematikoa</h3>
+        <p>Irakasleak ikaslearen portaera, aurrerapena eta zailtasunak dokumentatu behar ditu ziklo bakoitzean, eguneko edo asteko ohiko behaketetan oinarrituta. </p>
+        <p><span class="highlight">Helburua:</span> informazio zehatza jasotzea,
+            aldaketak garaiz detektatzea eta behar den laguntza eskaintzea.</p>
+          <p><span class="highlight">Gomendioa:</span> portaera eta errendimendua modu
+            kualitatibo eta kuantitatiboan jasotzea, gertaera garrantzitsuak idatziz nabarmenduz.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🗣️</span>Bilera laburrak</h3>
+        <p>Irakasle-taldearen barruan bilera periodikoak egitea, ikaslearen egoerari buruzko informazioa partekatzeko.</p>
+        <p><span class="highlight">Helburua:</span> jarraipena koordinatzea eta ikuspegi bateratua izatea.</p>
+          <p><span class="highlight">Gomendioa:</span> bilera labur eta erregularrak egitea,
+            behaketetan oinarritutako erabakiak hartzeko.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📋</span>Tresnak</h3>
+        <p>Fitxak, taulak, koadernoak edo aplikazio digitalak erabiliz datuak modu antolatuan jasotzea.</p>
+         <p><span class="highlight">Helburua:</span> informazioa modu eraginkorrean kudeatzea
+            eta jarraipen prozesua erraztea.</p>
+          <p><span class="highlight">Gomendioa:</span> datuak modu argian eta errepikagarrian jasotzea,
+            etorkizuneko erabakiak planifikatzeko.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🧩</span>Esku-hartze planak</h3>
+        <p>Ikasleei egindako esku-hartzeak planifikatzea, bereziki behar bereziak dituzten kasuetan.</p>
+         <p><span class="highlight">Adibidea:</span> irakurtzeko zailtasunak dituen ikaslearentzat
+            eguneroko jarduerak jasotzeko fitxa sortzea eta astean behin berrikustea.</p>
+          <p><span class="highlight">Helburua:</span> ikaslearen aurrerapena modu egituratuan monitorizatzea.</p>
+      </div>
+
+       <div class="card">
+          <h3><span class="emoji">👨‍👩‍👧‍👦</span>Gurasoen eta taldearen komunikazioa</h3>
+          <p>
+            Gomendagarria da gurasoekin eta bestelako irakasleekin informazioa partekatzea,
+            ikaslearen jarraipena hobetzeko.
+          </p>
+          <p><span class="highlight">Helburua:</span> ikuspegi bateratua izatea eta etxeko
+            eta eskolako jarduera koordinatzea.</p>
+        </div>
+
+        <div class="card">
+          <h3><span class="emoji">🔄</span>Reflexioa eta egokitzapena</h3>
+          <p>
+            Jarraipenaren emaitzak erregular aztertzea eta beharrezkoa bada,
+            esku-hartzeak eta estrategiak egokitzea.
+          </p>
+          <p><span class="highlight">Helburua:</span> ikaslearen ongizatea eta aurrerapena bermatzea,
+            egoeraren aldaketetara modu dinamikoan egokituz.</p>
+        </div>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

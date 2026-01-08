@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Educativos - Sarrera</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Times New Roman;
+            color: #000000;
+            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            text-decoration: underline;
+        }
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* Hero con video */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background: rgba(0,0,0,0.3);
+            z-index:0;
+        }
+
+        .hero-video .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-video h1 {
+            font-size:5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-video p {
+            font-size: 1.3rem;
+        }
+
+        /* NUEVAS SECCIONES (TEXTO + IMAGEN) */
+        .info-section {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 40px;
+        }
+
+        .info-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .info-text {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .info-text h2 {
+            margin-top: 0;
+            font-size: 2.3rem;
+            color: #0A3A5A;
+        }
+
+        .info-text p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .info-img {
+            flex: 1;
+        }
+
+        .info-img img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Feedback / formulario */
+        .feedback {
+            background-color:#e5e7eb;
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color:#000000;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #2ec4b6;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #28a197;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Hezkuntza Baliabideak</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Sarrera</a></li>
+                    <li><a href="Irakasleak.html">Irakasleak</a></li>
+                    <li><a href="Familiak.html">Familiak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero con video -->
+    <section class="hero-video">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="img/Irakasle(sarrera).mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+
+        <div class="hero-content">
+            <h1>Ongi etorri Hezkuntza Baliabidetara</h1>
+            <p>Espazio hau irakasleei eta familiei zuzenduta dago, bereziki etxean dibortzio-egoera baten eragina jasaten ari diren ikasleei laguntzeko.</p>
+        </div>
+    </section>
+
+    <h2 style="margin-top: 40px; font-size: 4rem; text-align: center; color:#3D5D5F">
+        Hemen hasten da bidea
+    <h2>
+
+    <!-- EKIMENA (TEXTO IZQUIERDA – FOTO DERECHA) -->
+    <section class="info-section">
+        <div class="info-text">
+            <h2 style="margin-left: 40px; color: #4a90e2">Ekimena</h2>
+            <p style="margin-left: 40px; margin-top: 30px; text-align: justify;">
+                Espazio hau irakasleei eta familiei zuzenduta dago, bereziki etxean dibortzio-egoera baten eragina jasaten ari diren ikasleei laguntzeko. Hemen aurkituko dituzue informazio argia, baliabide praktikoak eta azken ikerketetan oinarritutako orientabideak, egoera horiei modu kontziente eta errespetuz erantzuteko.
+            </p>
+        </div>
+
+        <div class="info-img">
+            <img src="img/Ekimena.png" style="width: 600px;" alt="Ekimena">
+        </div>
+    </section>
+
+    <!-- HELBURUA (FOTO IZQUIERDA – TEXTO DERECHA) -->
+    <section class="info-section">
+        <div class="info-img">
+            <img src="img/Helburua.png" style="width: 600px; margin-left: 60px;" alt="Helburua">
+        </div>
+
+        <div class="info-text">
+            <h2 style="margin-right;: 40px; margin-top: 30px; color: #4a90e2">Helburua</h2>
+            <p style="margin-right: 40px; margin-top: 30px; text-align: justify;">Helburua da ikastetxearen eta etxeko ingurunearen arteko lankidetza sustatzea, ikasleen garapen integrala eta ongizatea bultzatuz. Baliabide hauek erabiliz, familien eta irakasleen arteko komunikazioa sendotu eta laguntza egokia eskaintzea posible egiten da.</p>
+        </div>
+    </section>
+
+    <!-- Feedback / formulario -->
+    <div class="feedback">
+        <h2 style="margin-bottom: 1.5rem; text-align: center;">Ebaluaziorako galdetegia</h2>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; text-align: center;">
+            Eskerrik asko aldez aurretik aurkitutako orientabide eta baliabideei buruzko zure iritzia
+            partekatzeagatik. Zure laguntza baliagarria da plataformaren hobekuntzarako.
+        </p>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="nombre">Izen eta abizenak</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Posta elektronikoa</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Irakaslea edo familia?</label>
+                <select id="tipo" class="form-control" required>
+                    <option value="">Aukeratu aukera bat</option>
+                    <option value="profesor">Irakaslea</option>
+                    <option value="padre">Familia</option>
+                    <option value="otro">Bestea</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mezua edo iritzia</label>
+                <textarea id="mensaje" class="form-control" placeholder="Partekatu zure iritziak, galderak, aholkuak..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Mezua bidali</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Admin -->
+    <div style="position: fixed; bottom: 20px; right: 20px;">
+        <a href="admin.html" 
+           style="background: #2ec4b6; color: white; padding: 10px 15px; 
+                  text-decoration: none; border-radius: 5px; font-weight: bold;">
+           🔧 Admin
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                email: document.getElementById('email').value,
+                tipo: document.getElementById('tipo').value,
+                mensaje: document.getElementById('mensaje').value,
+                fecha: new Date().toLocaleString()
+            };
+            let respuestas = JSON.parse(localStorage.getItem('formularioRespuestas') || '[]');
+            respuestas.push(formData);
+            localStorage.setItem('formularioRespuestas', JSON.stringify(respuestas));
+            alert('✅ Gordeta! Guztira: ' + respuestas.length + ' erantzun');
+            this.reset();
+            console.log('Datos guardados:', formData);
+        });
+    </script>
+</body>
+</html>

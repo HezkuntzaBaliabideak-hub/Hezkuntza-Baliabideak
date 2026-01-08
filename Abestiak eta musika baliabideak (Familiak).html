@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abestiak eta musika baliabideak(Irakasleak)</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== CAJAS ===== */
+        .grid-boxes {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem auto 0;
+            max-width: 1250px;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* ===== CAJAS DE LIBROS ===== */
+        .book-box {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .book-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .book-info h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            color: #0A3A5A;
+            font-size: 1.2rem;
+        }
+
+        .book-cycle {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.6rem;
+        }
+
+        .book-info p {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .book-cover {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .book-cover img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .book-box {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/Abestiak eta musika baliabideak(Irakasleak + Familia).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Abestiak eta musika baliabideak</h1>
+        <p>Familientzako baliabide pedagogikoak</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Abestiak eta musika baliabideak</h2>
+            <p>
+                Atal honetan, dibortzioaren gaia haurrei lantzeko egokiak diren abestiak eta musika baliabideak biltzen dira.
+                Baliabide hauek orientagarriak dira, eta haurren adinaren, heldutasun emozionalaren eta gelako testuinguruaren
+                arabera egokitu daitezke.
+            </p>
+        </div>
+
+        <!-- CAJAS -->
+        <div class="grid-boxes">
+
+            <!-- LIBRO 1 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Siempre contigo → Kitty Kasaudo</h3>
+                    <p>Banaketa eta dibortzio prozesuak bizi dituzten haurrei laguntzeko abesti bat, oraingoan gurasoen ahotsetik kontatua: “Gauzak aldatu arren, jada elkarrekin bizi ez bagara ere… beti zurekin egongo naiz.”</p>
+                    <p>Entzun abestia <a href="https://www.youtube.com/watch?v=ddpCL2n_GCw" target="_blank">Hemen</a>.</p>
+                </div>
+                <div class="book-cover">
+                    <img src="img/Siempre contigo.jpg" alt="Libro 1">
+                </div>
+            </div>
+
+            <!-- LIBRO 2 -->
+            <div class="box book-box">
+                <div class="book-info">
+                    <h3>Mamá y papá se separan… pero el amor siempre está → Pequeñas grandes canciones </h3>
+                    <p>Abesti honek haurrei helarazten die gurasoen maitasuna bere horretan mantentzen dela, elkarrekin bizi ez arren. Hizkera hurbil, goxo eta ulerterraza erabiliz, mezu positiboak eskaintzen ditu haurren autoestimua eta lasaitasun emozionala indartzeko, tristura edo zalantza sentimenduak konfiantza eta segurtasun bihurtzen lagunduz.</p>
+                    <p>Entzun abestia <a href="https://www.youtube.com/watch?v=ZFMuDQnYDFE" target="_blank">Hemen</a>.</p> 
+                </div>
+                <div class="book-cover">
+                    <img src="img/Mamá y Papá se separan… pero el AMOR SIEMPRE ESTÁ.jpg" alt="Libro 2">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hezkuntza Baliabideak</p>
+</footer>
+
+</body>
+</html>

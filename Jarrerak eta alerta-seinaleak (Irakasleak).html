@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarrerak eta alerta-seinaleak</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== ZIKLOAK ===== */
+        .cycle {
+            margin-bottom: 4rem;
+        }
+
+        .cycle h3 {
+            color: #0A3A5A;
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #2ec4b6;
+            padding-left: 1rem;
+        }
+
+        .cycle-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .cycle-box {
+            background: #ffffff;
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .cycle-box h4 {
+            color: #0A3A5A;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .cycle-box ul {
+            padding-left: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cycle-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .cycle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">Hezkuntza Baliabideak</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hasiera</a></li>
+                <li><a href="irakasleak.html">Irakasleak</a></li>
+                <li><a href="Familiak.html">Familiak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="img/Orientabidea(irakasle).mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1>Jarrerak eta alerta-seinaleak</h1>
+        <p>Ikasleen ongizatea zaintzeko orientabideak</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content">
+    <div class="container">
+
+        <!-- INTRO -->
+        <div class="intro">
+            <p>
+                Haurrek dibortzio-prozesu batean bizi direnean, beren jarrera eta portaerak aldatu egin daitezke, baita errutinak eta emozioak ere. Atal honek alerta-seinale nagusiak aurkezten ditu, ikasleen ongizatea zaintzeko eta behar denean laguntza egokia eskaintzeko. Gainera, jokabide praktikoak eskaintzen dira, irakasleek egoera horiei modu eraginkorrean eta koherentean erantzuteko. Atal hau zikloka banatuta dago, adina kontuan hartu beharreko faktore bat delako, baina hori ez du esan nahi jarrera eta orientabide hauek soilik ziklo horietara mugatzen direla.
+            </p>
+        </div>
+
+        <!-- 1. ZIKLOA -->
+        <div class="cycle">
+            <h3>1. zikloa</h3>
+            <div class="cycle-grid">
+                <div class="cycle-box">
+                    <h4>Portaera ohikoak</h4>
+                    <ul>
+                        <li>Arreta falta eta taldean parte hartzeko beldurra</li>
+                        <li>Frustrazioa jarduera zailen aurrean</li>
+                        <li>Adimen emozionaleko adierazpen eskasa</li>
+                        <li>Irakaslearen laguntza beharra</li>
+                        <li>Besteekin erlazionatzeko zailtasunak</li>
+                        <li>Erru- eta tristura-sentimendua</li>
+                        <li>Banaketaren antsietatea</li>
+                        <li>Humorean aldaketa bortitzak</li>
+                    </ul>
+                </div>
+
+                <div class="cycle-box">
+                    <h4>Jokabide praktikoak</h4>
+                    <ul>
+                        <li>Talde txikietan lan egitea eta helburu txikiak ezartzea</li>
+                        <li>Aginduak modu argi eta pausatuan ematea</li>
+                        <li>Sari sinpleak erabiltzea portaera positiboa indartzeko</li>
+                        <li>Irakaslearen jarraipen etengabea eta esku-hartze puntualak</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. ZIKLOA -->
+        <div class="cycle">
+            <h3>2. zikloa</h3>
+            <div class="cycle-grid">
+                <div class="cycle-box">
+                    <h4>Portaera ohikoak</h4>
+                    <ul>
+                        <li>Taldeko gatazkak eta motibazio falta</li>
+                        <li>Komunikazio eskasa eta feedback-a ez onartzea</li>
+                        <li>Autoestimua baxua</li>
+                        <li>Kanpoko eta barneko portaera arazoak</li>
+                        <li>Arreta arazoak eta ikasketa-interes falta</li>
+                    </ul>
+                </div>
+
+                <div class="cycle-box">
+                    <h4>Jokabide praktikoak</h4>
+                    <ul>
+                        <li>Helburu txiki eta neurrizkoak ezartzea</li>
+                        <li>Talde-laneko rolak argi definitzea</li>
+                        <li>Aurrerapenak modu bisualean erakustea</li>
+                        <li>Autoebaluazio tresnak erabiltzea</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ZIKLOA -->
+        <div class="cycle">
+            <h3>3. zikloa</h3>
+            <div class="cycle-grid">
+                <div class="cycle-box">
+                    <h4>Portaera ohikoak</h4>
+                    <ul>
+                        <li>Autokonfiantza falta eta isolamendua</li>
+                        <li>Gatazkak eta motibazio falta</li>
+                        <li>Emozioen kudeaketa zailtasunak</li>
+                        <li>Saihesteko portaerak eta sintoma somatikoak</li>
+                    </ul>
+                </div>
+
+                <div class="cycle-box">
+                    <h4>Jokabide praktikoak</h4>
+                    <ul>
+                        <li>Esku-hartze puntual eta pertsonalizatuak</li>
+                        <li>Feedback konstruktiboa eskaintzea</li>
+                        <li>Talde txikietako tutoretzak sustatzea</li>
+                        <li>Ikaskuntza jarduerak egokitzea</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+</footer>
+
+</body>
+</html>

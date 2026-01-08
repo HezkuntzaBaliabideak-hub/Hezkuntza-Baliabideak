@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familientzako Baliabideak</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Times New Roman;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            text-decoration: underline;
+        }
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* Hero con video */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh; /* hero más pequeño */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background: rgba(0,0,0,0.3);
+            z-index:0;
+        }
+        .hero-video .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .hero-video h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero-video p {
+            font-size: 1rem;
+            max-width: 500px;
+        }
+
+        /* Sección de descripción */
+        .content {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 3rem;
+        }
+        .section-title h2 {
+            margin-bottom: 1.5rem; /* espacio entre título y párrafo */
+            color: #0A3A5A;
+        }
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Grid de enlaces */
+        .cursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .curso-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-decoration: none;
+            color: #333;
+            border-left: 4px solid #2ec4b6;
+        }
+        .curso-card:hover {
+            transform: translateY(-5px);
+        }
+        .curso-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4a90e2;
+        }
+        .curso-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #0A3A5A;
+        }
+        .curso-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Botón volver */
+        .btn-outline {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #2ec4b6;
+            color: #2ec4b6;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-outline:hover {
+            background-color: #2ec4b6;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera / Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Hezkuntza Baliabideak</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hasiera</a></li>
+                    <li><a href="Irakasleak.html" class="active">Irakasleak</a></li>
+                    <li><a href="Familiak.html">Familiak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero con vídeo -->
+    <section class="hero-video">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="img/Familiak (sarrera).mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Familiak</h1>
+            <p>Familientzat bideratutako orientabideak eta baliabideak</p>
+        </div>
+    </section>
+
+    <!-- Sección de descripción -->
+    <section class="content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Familientzako Orientabideak eta Baliabideak</h2>
+                <p>
+                    Familiek funtsezko rola dute haurren ongizatean eta garapen integralean, bereziki dibortzio- edo banaketa-prozesuek eragina izan dezaketen uneetan. Sekzio honek orientabide praktikoak eta baliabide hezigarriak eskaintzen dizkie familiei, egoera horiei modu kontziente, seguru eta maitasunez erantzuteko. Hemen aurkituko dituzue bi atal nagusi: “Orientabideak”, non aholkuak eta jarraibideak ematen diren haurren beharrak ulertzeko eta laguntzeko, eta “Baliabideak”, non jarduera, ipuin, bideo eta material praktikoak aurkituko dituzuen, etxean aplikatzeko prest.
+                </p>
+            </div>
+
+            <!-- Solo dos cajas -->
+            <div class="cursos-grid">
+                <a href="Orientabideak (Familiak).html" class="curso-card">
+                    <i>📘</i>
+                    <h3>Orientabideak</h3>
+                    <p>Haurren beharrak identifikatzeko eta erantzuteko jarraibideak</p>
+                </a>
+
+                <a href="Baliabideak (Familiak).html" class="curso-card">
+                    <i>📂</i>
+                    <h3>Baliabideak</h3>
+                    <p>Jarduera, ipuin, bideo eta material praktikoak klasean aplikatzeko prest</p>
+                </a>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="index.html" class="btn-outline">Hasierara itzuli</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+        </div>
+    </footer>
+</body>
+</html>

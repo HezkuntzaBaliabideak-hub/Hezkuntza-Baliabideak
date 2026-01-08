@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientabideak</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            color: #000000;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #0A3A5A;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #A8D0E6;
+        }
+
+        /* ===== HERO VIDEO ===== */
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+        }
+
+        /* ===== CONTENIDO ===== */
+        .content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-title h2 {
+            color: #0A3A5A;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* ===== CAJAS ===== */
+        .grid-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem auto 0;
+            max-width: 900px;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 1.4rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s;
+            border-left: 4px solid #2ec4b6;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box .emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .box h3 {
+            color: #0A3A5A;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 4rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .grid-boxes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+ <body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Hezkuntza Baliabideak</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hasiera</a></li>
+                    <li><a href="irakasleak.html">Irakasleak</a></li>
+                    <li><a href="Familiak.html">Familiak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-video">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="img/Orientabidea(Familiak).mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Orientabideak</h1>
+            <p>Familientzako orientazio pedagogikoa</p>
+        </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="content">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Orientabide Orokorrak</h2>
+                <p>
+                    Familia batek dibortzio-prozesu batean seme-alabekin laguntza egokia eskaintzea funtsezkoa da haien ongizatea eta garapen emozionala bermatzeko. Atal honetan, gurasoek arreta jarri dezaketen alerta-seinale nagusiak, ikasleekin komunikatzeko aholkuak eta beharrezko laguntza profesionalak aurkezten dira. Informazio hau erabiliz, familia bakoitzak modu eraginkorrean lagundu dezake haurra aldaketa emozional eta sozialetara egokitzen, eta Baliabideak atalean aurkituko dituzue plantillak eta material osagarria.</p>
+            </div>
+
+            <!-- CAJAS -->
+            <div class="grid-boxes">
+
+                <a href="Jarrerak eta alerta-seinaleak (Familiak).html" class="box">
+                    <span class="emoji">🚨</span>
+                    <h3>Jarrera eta alerta-seinaleak</h3>
+                    <p>Dibortzio-egoeran dauden haurrengan ager daitezkeen jarrera-aldaketak eta alerta-seinale nagusiak identifikatzeko orientabideak.</p>
+                </a>
+
+                <a href="Komunikazioa eta koordinazioa (Familiak).html" class="box">
+                    <span class="emoji">🤝</span>
+                    <h3>Komunikazioa eta koordinazioa ikastetxearekin</h3>
+                    <p>Ikastetxearekin komunikazio eraginkorra eta koordinazioa sustatzeko jarraibideak.</p>
+                </a>
+
+                <a href="Laguntza profesionala (Familiak).html" class="box">
+                    <span class="emoji">🧠</span>
+                    <h3>Laguntza profesionala</h3>
+                    <p>Laguntza profesional espezializatua noiz eta nola bideratu jakiteko informazioa eta orientabideak.</p>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Hezkuntza Baliabideak - Eskubide guztiak erreserbatuta.</p>
+    </footer>
+
+</body>
+</html>
